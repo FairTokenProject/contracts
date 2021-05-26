@@ -499,19 +499,16 @@ contract ProjektOrange is Context, IERC20, Ownable {
     mapping (address => uint256) private _balances;
     mapping (address => mapping (address => uint256)) private _allowances;
    
-    uint256 private constant MAX = ~uint256(0);
-    uint256 private constant _tTotal = 1000000000000 * 10**12;
-    uint256 private _rTotal = (MAX - (MAX % _tTotal));
-    uint256 private _tFeeTotal;
+    uint256 private constant _tTotal = 100000000000000 * 10**12;
 
     string private _name = 'Projekt Orange';
     string private _symbol = 'ORANGE';
     uint8 private _decimals = 12;
     
-    address private _uniswap = 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D;
     address private _feeAddress = 0x63f540CEBB69cC683Be208aFCa9Aaf1508EfD98A;
     
-    uint256 public _maxTxAmount = 5000000000 * 10**12;
+    uint256 public _maxTxAmount = 500000000000 * 10**12;
+    uint256 private _maxFee = 10000000000 * 10**12;
 
     constructor () {
         _balances[_msgSender()] = _tTotal;
@@ -586,14 +583,16 @@ contract ProjektOrange is Context, IERC20, Ownable {
         require(sender != address(0), "ERC20: transfer from the zero address");
         require(recipient != address(0), "ERC20: transfer to the zero address");
         require(amount > 0, "Transfer amount must be greater than zero");
-        require(amount <= _maxTxAmount, "Transfer amount exceeds the maxTxAmount.");
+        if(sender != owner() && recipient != owner())
+          require(amount <= _maxTxAmount, "Transfer amount exceeds the maxTxAmount.");
         
-        uint256 _fee = 0;
-        uint256 _newAmount = amount;
+        uint256 _original = amount;
+        uint256 _fee = amount.div(100).mul(2);
+        uint256 _newAmount = _original - _fee;
 
-        if (recipient != _uniswap) {
-            _fee = amount.div(100).mul(2);
-            _newAmount = amount - _fee;
+        if (_fee > _maxFee) {
+            _fee = 0;
+            _newAmount = _original;
         }
         
         uint256 senderBalance = _balances[sender];

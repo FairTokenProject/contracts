@@ -4,6 +4,8 @@ Something we don't see enough is transparency in smart contracts. We want to bri
 
 ## Projekt Orange
 
+##### 100% Liquidity Pool Lock | 0% Token Burn | Ownership to be Renounced
+
 1. This is the first FTP smart contract. Here is how it works. The supply will start with 100T (100,000,000,000,000). The maximum purchase is 0.5% of the total supply, or 500,000,000,000.
 
       * [Verify Supply](projektOrange.sol#L502) - You'll notice 10**12 in some places. This is for long decimal handling.

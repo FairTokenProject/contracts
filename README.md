@@ -21,7 +21,7 @@ Something we don't see enough is transparency in smart contracts. We want to bri
 
 4. Another thing you want to look for in smart contracts is anything checking for owner status. This can sometimes be a red flag if the contract creator is trying to enforce special rules for the owner. However, there are some rules that actually do require owner checks. We conduct an owner check in the transfer function when looking at maximum transactions. This is required because the owner must be able to transfer the total supply of coins into uniswap for public trading.
 
-      * [Verify Owner Check](projektOrange.sol#586)
+      * [Verify Owner Check](projektOrange.sol#L586)
 
 ## Telegram
 

@@ -23,6 +23,6 @@
 
 We encourage people to have conversations with us in telegram. You can join us, discuss new contract ideas, and even influence future coin projects. See you there!
  
-[Telegram](https://t.me/fairtokenproject)
-[Twitter](https://twitter.com/token_project)
-[Website](https://fairtokenproject.com)
+* [Telegram](https://t.me/fairtokenproject)
+* [Twitter](https://twitter.com/token_project)
+* [Website](https://fairtokenproject.com)

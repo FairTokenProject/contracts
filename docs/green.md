@@ -12,15 +12,15 @@ At a high level, our realtime measures execute in 3 steps.
 
 1. Flagging: When a purchase transaction executes within a block threshold of the previous purchase, flag buyer.
 
-      * [See Flagging Code](projektGreen.sol#L241)
+      * [See Flagging Code](../projektGreen.sol#L241)
 
 2. Banning: When flags, or warnings, are greater than 2, ban address from selling. The implications are severe, and thus reversible.
 
-      * [See Banning Code](projektGreen.sol#L238)
+      * [See Banning Code](../projektGreen.sol#L238)
 
 3. Verifying: Check if seller is banned
 
-      * [See Verification Code](projektGreen.sol#L233)
+      * [See Verification Code](../projektGreen.sol#L233)
 
 Sell banning is reversible, but none of our real traders were accidentally banned during the launch of $GREEN. So reversal was never necessary.
 

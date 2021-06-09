@@ -259,7 +259,7 @@ contract ProjektGreen is Context, IERC20, Ownable {
             takeFee = false;
         }
         
-		_registerBlock(block.number, recipient);
+        _registerBlock(block.number, recipient);
         _tokenTransfer(sender,recipient,amount,takeFee);
     }
 

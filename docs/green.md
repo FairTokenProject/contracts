@@ -4,7 +4,7 @@ This is the second FTP smart contract to be deployed to mainnet. We are excited 
 
 Here's how we look at it. 30x gains in an hour are not normal in healthy conditions, but it is unavoidable with token launches unless you restrict selling, which we will never do. Therefore, coming into the 2nd day with 3x gains holding is a huge success.
 
-##### 100% Liquidity Pool Lock | 0% Token Burn | Anti Bot Countermeasures | Anti Whale | Maximum Buys
+##### 100% Liquidity Pool BURNED | 0% Token Burn | Anti Bot Countermeasures | Anti Whale | Maximum Buys
 
 The core difference between $ORANGE and $GREEN is that Projekt Green implements some rudimentary realtime bot countermeasures. This was a great step towards a proof of concept for us, and more of this should be expected in the future.
 

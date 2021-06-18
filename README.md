@@ -6,6 +6,7 @@ Something we don't see enough is transparency in smart contracts. We want to bri
 
 ### Docs
 
+* [Projekt Gold](docs/gold.md)
 * [Projekt Green](docs/green.md)
 * [Projekt Orange](docs/orange.md)
 
